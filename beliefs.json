@@ -1,0 +1,31 @@
+{
+  "beliefs":[
+    {
+      "id":"truth_over_comfort",
+      "effect":5,
+      "strength":0.9,
+      "predicts":{
+        "truth_accuracy":0.8,
+        "knowledge_growth":0.7
+      }
+    },
+    {
+      "id":"open_discussion",
+      "effect":3,
+      "strength":0.85,
+      "predicts":{
+        "knowledge_growth":0.8,
+        "social_trust":0.5
+      }
+    },
+    {
+      "id":"speech_suppression",
+      "effect":-4,
+      "strength":0.85,
+      "predicts":{
+        "knowledge_growth":-0.7,
+        "social_trust":-0.5
+      }
+    }
+  ]
+}
