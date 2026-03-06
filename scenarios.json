@@ -1,12 +1,16 @@
 {
-  "scenarios":[
-    {
-      "name":"debate_allowed",
-      "conditions":["open_discussion"]
-    },
-    {
-      "name":"criticism_banned",
-      "conditions":["speech_suppression"]
-    }
-  ]
+ "scenarios":[
+  {
+   "name":"open debate allowed",
+   "conditions":["open_discussion"]
+  },
+  {
+   "name":"government bans criticism",
+   "conditions":["speech_suppression"]
+  },
+  {
+   "name":"comforting misinformation",
+   "conditions":["comforting_lie"]
+  }
+ ]
 }
