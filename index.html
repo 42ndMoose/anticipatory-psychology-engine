@@ -5,16 +5,7 @@
 
 <title>Anticipatory Psychology Engine</title>
 
-<style>
-
-body{
-font-family:Arial;
-max-width:800px;
-margin:auto;
-padding:40px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -24,7 +15,31 @@ padding:40px;
 
 <p>Transparent belief-based reasoning system.</p>
 
-<div id="output"></div>
+<h2>Scenario Results</h2>
+
+<div id="results"></div>
+
+<hr>
+
+<h2>Run Custom Scenario</h2>
+
+<input id="scenarioInput" placeholder="enter condition e.g open_discussion">
+
+<button onclick="runCustom()">Evaluate</button>
+
+<div id="customResult"></div>
+
+<hr>
+
+<h2>Psychology Selector</h2>
+
+<select id="psychologySelect"></select>
+
+<hr>
+
+<h2>Beliefs</h2>
+
+<div id="beliefs"></div>
 
 <script src="engine.js"></script>
 
