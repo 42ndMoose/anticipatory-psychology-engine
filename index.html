@@ -1,48 +1,63 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-<title>Anticipatory Psychology Engine</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anticipatory Psychology Engine</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header>
+    <h1>Anticipatory Psychology Engine</h1>
+    <p class="lead">Compare explicit value-belief psychologies against shared scenarios.</p>
+  </header>
 
-<h1>Anticipatory Psychology Engine</h1>
+  <main>
+    <section class="panel controls">
+      <h2>Model Controls</h2>
+      <label for="psychologySelect">Active psychology</label>
+      <select id="psychologySelect"></select>
+      <p id="modelDescription" class="muted"></p>
+      <div id="valueChips" class="chips"></div>
+    </section>
 
-<p>Transparent belief-based reasoning system.</p>
+    <section class="panel">
+      <h2>Scenario Evaluations</h2>
+      <p class="muted">Each scenario activates beliefs. Belief predictions are scored through this psychology's value priorities.</p>
+      <div id="results" class="grid"></div>
+    </section>
 
-<h2>Scenario Results</h2>
+    <section class="panel">
+      <h2>Cross-Psychology Comparison</h2>
+      <div class="table-wrap">
+        <table id="comparisonTable">
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Top Alignment</th>
+              <th>Winning Psychology</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
 
-<div id="results"></div>
+    <section class="panel">
+      <h2>Belief Calibration</h2>
+      <p class="muted">Strength reflects predictive reliability. Maturity reflects how deeply tested a belief has been.</p>
+      <div id="beliefs"></div>
+    </section>
 
-<hr>
+    <section class="panel">
+      <h2>Custom Scenario Sandbox</h2>
+      <p class="muted">Select one or more conditions to simulate. This evaluates only the active psychology.</p>
+      <div id="customConditions" class="checkbox-list"></div>
+      <button id="runCustomBtn">Evaluate custom scenario</button>
+      <div id="customResult" class="result-card"></div>
+    </section>
+  </main>
 
-<h2>Run Custom Scenario</h2>
-
-<input id="scenarioInput" placeholder="enter condition e.g open_discussion">
-
-<button onclick="runCustom()">Evaluate</button>
-
-<div id="customResult"></div>
-
-<hr>
-
-<h2>Psychology Selector</h2>
-
-<select id="psychologySelect"></select>
-
-<hr>
-
-<h2>Beliefs</h2>
-
-<div id="beliefs"></div>
-
-<script src="engine.js"></script>
-
+  <script src="engine.js"></script>
 </body>
-
 </html>

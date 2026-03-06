@@ -1,19 +1,65 @@
 {
-"name":"stoicism",
-
-"beliefs":[
-
-{
-"id":"emotional_control",
-"effect":3,
-"strength":0.9
-},
-
-{
-"id":"accept_reality",
-"effect":4,
-"strength":0.95
-}
-
-]
+  "name": "stoic_pragmatism",
+  "description": "Prioritizes inner discipline, realism, and stable collective order under uncertainty.",
+  "values": {
+    "knowledge_growth": 0.5,
+    "truth_accuracy": 0.8,
+    "social_trust": 0.5,
+    "harm_reduction": 0.7,
+    "autonomy": 0.4,
+    "stability": 1.0
+  },
+  "beliefs": [
+    {
+      "id": "epistemic_humility",
+      "effect": 2,
+      "strength": 0.84,
+      "maturity": 0.78,
+      "predicts": {
+        "truth_accuracy": 0.4,
+        "stability": 0.3
+      }
+    },
+    {
+      "id": "accept_reality",
+      "effect": 3,
+      "strength": 0.91,
+      "maturity": 0.88,
+      "predicts": {
+        "harm_reduction": 0.5,
+        "stability": 0.6
+      }
+    },
+    {
+      "id": "order_first",
+      "effect": 2,
+      "strength": 0.82,
+      "maturity": 0.7,
+      "predicts": {
+        "stability": 0.8,
+        "autonomy": -0.3
+      }
+    },
+    {
+      "id": "speech_suppression",
+      "effect": -1,
+      "strength": 0.7,
+      "maturity": 0.66,
+      "predicts": {
+        "stability": 0.3,
+        "social_trust": -0.2,
+        "truth_accuracy": -0.3
+      }
+    },
+    {
+      "id": "collective_action",
+      "effect": 2,
+      "strength": 0.79,
+      "maturity": 0.74,
+      "predicts": {
+        "harm_reduction": 0.4,
+        "stability": 0.4
+      }
+    }
+  ]
 }

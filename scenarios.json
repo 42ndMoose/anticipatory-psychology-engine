@@ -1,16 +1,24 @@
 {
- "scenarios":[
-  {
-   "name":"open debate allowed",
-   "conditions":["open_discussion"]
-  },
-  {
-   "name":"government bans criticism",
-   "conditions":["speech_suppression"]
-  },
-  {
-   "name":"comforting misinformation",
-   "conditions":["comforting_lie"]
-  }
- ]
+  "scenarios": [
+    {
+      "name": "Open public debate with disagreement protected",
+      "conditions": ["open_discussion", "epistemic_humility"]
+    },
+    {
+      "name": "Government bans criticism to preserve unity",
+      "conditions": ["speech_suppression", "order_first"]
+    },
+    {
+      "name": "Paternalistic comforting misinformation campaign",
+      "conditions": ["comforting_lie", "social_stability"]
+    },
+    {
+      "name": "Crisis response shares uncertain evidence transparently",
+      "conditions": ["truth_over_comfort", "evidence_transparency", "collective_action"]
+    },
+    {
+      "name": "Policy maximizes total happiness but restricts minority rights",
+      "conditions": ["maximize_happiness", "minority_harm", "order_first"]
+    }
+  ]
 }
