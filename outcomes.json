@@ -1,0 +1,12 @@
+{
+  "outcomes":{
+    "debate_allowed":{
+      "knowledge_growth":0.7,
+      "social_trust":0.3
+    },
+    "criticism_banned":{
+      "knowledge_growth":-0.6,
+      "social_trust":-0.4
+    }
+  }
+}
