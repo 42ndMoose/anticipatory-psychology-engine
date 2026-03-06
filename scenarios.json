@@ -1,0 +1,12 @@
+{
+  "scenarios":[
+    {
+      "name":"debate_allowed",
+      "conditions":["open_discussion"]
+    },
+    {
+      "name":"criticism_banned",
+      "conditions":["speech_suppression"]
+    }
+  ]
+}
