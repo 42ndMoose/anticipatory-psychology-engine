@@ -1,35 +1,134 @@
-body{
-
-font-family:Arial;
-max-width:900px;
-margin:auto;
-padding:40px;
-
+:root {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #2563eb;
+  --border: #dbe5f0;
 }
 
-h1{
-
-text-align:center;
-
+* {
+  box-sizing: border-box;
 }
 
-input{
-
-padding:8px;
-width:300px;
-
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #eef4ff, var(--bg) 40%);
+  line-height: 1.5;
 }
 
-button{
-
-padding:8px;
-
+header,
+main {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
 }
 
-.belief{
+header {
+  padding: 2rem 0 1rem;
+}
 
-border:1px solid #ccc;
-padding:10px;
-margin-bottom:10px;
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
 
+.lead {
+  color: var(--muted);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 22px rgb(15 23 42 / 0.05);
+}
+
+.controls {
+  display: grid;
+  gap: 0.5rem;
+}
+
+select,
+button {
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem;
+}
+
+.result-card,
+.belief {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #fcfdff;
+}
+
+.verdict {
+  color: var(--accent);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.chips {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: 1px solid #c7d7f6;
+  color: #1d4ed8;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: #eff6ff;
+  font-size: 0.85rem;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
 }

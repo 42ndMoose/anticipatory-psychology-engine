@@ -1,37 +1,91 @@
 {
-"name":"your_psychology",
-
-"beliefs":[
-
-{
-"id":"truth_over_comfort",
-"effect":5,
-"strength":0.95
-},
-
-{
-"id":"open_discussion",
-"effect":3,
-"strength":0.9
-},
-
-{
-"id":"speech_suppression",
-"effect":-4,
-"strength":0.9
-},
-
-{
-"id":"empathy_required",
-"effect":-3,
-"strength":0.85
-},
-
-{
-"id":"comforting_lie",
-"effect":-4,
-"strength":0.9
-}
-
-]
+  "name": "transparent_pluralism",
+  "description": "Balances truth-seeking, dignity, and social trust through auditable belief revision.",
+  "values": {
+    "knowledge_growth": 1.0,
+    "truth_accuracy": 1.0,
+    "social_trust": 0.7,
+    "harm_reduction": 0.9,
+    "autonomy": 0.9,
+    "stability": 0.4
+  },
+  "beliefs": [
+    {
+      "id": "truth_over_comfort",
+      "effect": 4,
+      "strength": 0.93,
+      "maturity": 0.82,
+      "predicts": {
+        "truth_accuracy": 0.9,
+        "knowledge_growth": 0.7,
+        "social_trust": 0.2
+      }
+    },
+    {
+      "id": "open_discussion",
+      "effect": 3,
+      "strength": 0.88,
+      "maturity": 0.75,
+      "predicts": {
+        "knowledge_growth": 0.8,
+        "autonomy": 0.6,
+        "social_trust": 0.3
+      }
+    },
+    {
+      "id": "speech_suppression",
+      "effect": -4,
+      "strength": 0.9,
+      "maturity": 0.84,
+      "predicts": {
+        "autonomy": -0.9,
+        "truth_accuracy": -0.6,
+        "stability": 0.1
+      }
+    },
+    {
+      "id": "comforting_lie",
+      "effect": -3,
+      "strength": 0.87,
+      "maturity": 0.8,
+      "predicts": {
+        "truth_accuracy": -0.8,
+        "social_trust": -0.4,
+        "stability": 0.2
+      }
+    },
+    {
+      "id": "evidence_transparency",
+      "effect": 3,
+      "strength": 0.85,
+      "maturity": 0.7,
+      "predicts": {
+        "truth_accuracy": 0.8,
+        "social_trust": 0.4,
+        "knowledge_growth": 0.5
+      }
+    },
+    {
+      "id": "epistemic_humility",
+      "effect": 2,
+      "strength": 0.8,
+      "maturity": 0.68,
+      "predicts": {
+        "knowledge_growth": 0.6,
+        "social_trust": 0.2,
+        "harm_reduction": 0.2
+      }
+    },
+    {
+      "id": "minority_harm",
+      "effect": -5,
+      "strength": 0.92,
+      "maturity": 0.9,
+      "predicts": {
+        "harm_reduction": -0.9,
+        "autonomy": -0.7,
+        "social_trust": -0.5
+      }
+    }
+  ]
 }

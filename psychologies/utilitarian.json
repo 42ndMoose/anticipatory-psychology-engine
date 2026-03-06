@@ -1,19 +1,67 @@
 {
-"name":"utilitarianism",
-
-"beliefs":[
-
-{
-"id":"maximize_happiness",
-"effect":5,
-"strength":0.9
-},
-
-{
-"id":"reduce_suffering",
-"effect":4,
-"strength":0.9
-}
-
-]
+  "name": "utilitarian_revisionism",
+  "description": "Optimizes expected wellbeing while revising strategies according to observed outcomes.",
+  "values": {
+    "knowledge_growth": 0.7,
+    "truth_accuracy": 0.7,
+    "social_trust": 0.6,
+    "harm_reduction": 1.0,
+    "autonomy": 0.5,
+    "stability": 0.7
+  },
+  "beliefs": [
+    {
+      "id": "maximize_happiness",
+      "effect": 4,
+      "strength": 0.9,
+      "maturity": 0.86,
+      "predicts": {
+        "harm_reduction": 0.8,
+        "social_trust": 0.3
+      }
+    },
+    {
+      "id": "reduce_suffering",
+      "effect": 5,
+      "strength": 0.92,
+      "maturity": 0.85,
+      "predicts": {
+        "harm_reduction": 1.0,
+        "stability": 0.2
+      }
+    },
+    {
+      "id": "comforting_lie",
+      "effect": 1,
+      "strength": 0.61,
+      "maturity": 0.41,
+      "predicts": {
+        "social_trust": -0.3,
+        "stability": 0.4,
+        "harm_reduction": 0.2
+      }
+    },
+    {
+      "id": "minority_harm",
+      "effect": -4,
+      "strength": 0.83,
+      "maturity": 0.79,
+      "predicts": {
+        "harm_reduction": -0.8,
+        "autonomy": -0.6,
+        "social_trust": -0.4
+      }
+    },
+    {
+      "id": "collective_action",
+      "effect": 3,
+      "strength": 0.77,
+      "maturity": 0.67,
+      "predicts": {
+        "harm_reduction": 0.5,
+        "stability": 0.3,
+        "social_trust": 0.3
+      }
+    }
+  ]
 }
